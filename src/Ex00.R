@@ -9,7 +9,6 @@ diff <- Before - After  # diff 변수에 값을 대입
 diff                    # diff 변수 출력
 boxplot(diff)           # diff 변수의 데이터를 boxplot 그래프로 출력
 
-
 ##### T 통계량 계산
 mean_diff <- mean(diff) # diff 의 평균값 
 mean_diff
@@ -22,9 +21,11 @@ t_stat
 
 ##### 양측 검증을 수행하는 경우
 t.test(Before, After, alternative = c("two.sided"), paired = TRUE, conf.level = 0.95)
+# p-value = 0.006864
 
 ##### 단측 검증을 수행하는 경우
-t.test(Before, After, alternative = c("greater"), paired = TRUE, conf.level = 0.95)
+t.test(Before, After, alternative = c("greater"),   paired = TRUE, conf.level = 0.95)
+# p-value = 0.003432
 
 ##### 양측검정, 단측검정 모두 p-값이 유의수준보다 작으므로, 유의수준 5% 기준으로 
 ##### 귀무가설을 기각하고, 대립가설을 채택하게된다.
