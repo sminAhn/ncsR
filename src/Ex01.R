@@ -37,3 +37,12 @@ boxplot(EuStockMarkets[,'DAX'])   # boxplot 그리기
 plot(EuStockMarkets[,'DAX'], EuStockMarkets[,'SMI']) # 두 변수 간의 산점도 출력
 plot(EuStockMarkets)   # 시계열 데이터 출력
 
+
+library("ggplot2")
+
+par(mfrow=c(2,2))
+hist(EuStockMarkets[,'DAX'], breaks = 50)      # 히스토그램 그리기
+boxplot(EuStockMarkets[,'DAX'], breaks = 50)   # boxplot 그리기
+plot(EuStockMarkets[,'DAX'], EuStockMarkets[,'SMI'], breaks = 50) # 두 변수 간의 산점도 출력
+
+
